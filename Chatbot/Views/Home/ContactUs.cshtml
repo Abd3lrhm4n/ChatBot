@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Chat With Us";
+}
+
+<div class="messaging">
+    <div class="inbox_msg">
+
+        <div class="mesgs">
+            <div class="msg_history" id="messagesDiv">
+            </div>
+
+        </div>
+    </div>
+    <form id="sendMessageForm" method="post">
+        <div class="form-inline">
+            <input type="text" name="MessageBody" id="messageBody" class="form-control col-10" />
+            <button type="submit" id="btnSend" class="btn btn-info col-2">Send</button>
+        </div>
+    </form>
+</div>
+
+
+@section Scripts{
+    <script src="~/js/ContactUs.js"></script>
+
+}

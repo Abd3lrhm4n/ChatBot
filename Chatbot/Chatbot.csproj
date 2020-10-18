@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-Chatbot-F100B513-A221-4CA3-8720-4B8D5E3CF079</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\20201014131942_first migration.cs" />
+    <Compile Remove="Data\Migrations\20201014131942_first migration.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201014133018_first migration.cs" />
+    <Compile Remove="Data\Migrations\20201014133018_first migration.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201014175454_first migration.cs" />
+    <Compile Remove="Data\Migrations\20201014175454_first migration.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201016002057_added language column to WordClassifications.cs" />
+    <Compile Remove="Data\Migrations\20201016002057_added language column to WordClassifications.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201016090416_change PossibleClassification to foreign key from Classification.cs" />
+    <Compile Remove="Data\Migrations\20201016090416_change PossibleClassification to foreign key from Classification.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+  </ItemGroup>
+
+</Project>
