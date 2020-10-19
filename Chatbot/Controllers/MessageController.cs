@@ -49,6 +49,10 @@ namespace Chatbot.Controllers
         [HttpPost("SendMessage")]
         public async Task<IActionResult> SendMessage(MessageViewModel message)
         {
+            if (!ModelState.IsValid)
+            {
+                return Ok(new { message = "" });
+            }
             string humanId = User.GetUserId();
 
             _msg.BotId = BotExtentions.BotId;

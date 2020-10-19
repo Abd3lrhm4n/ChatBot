@@ -47,6 +47,10 @@ $('#sendMessageForm').on('submit', function (e) {
 
     let message = $('#messageBody').val();
 
+    if (!message) {
+        return false;
+    }
+
     insertChat('human', message)
 
     $('#messageBody').val('')
@@ -58,7 +62,9 @@ $('#sendMessageForm').on('submit', function (e) {
         dataType: "json",
         data: JSON.stringify({ MessageBody: message }),
         success: function (e) {
-            insertChat('bot', e.message)
+            if (e.message) {
+                insertChat('bot', e.message)
+            }
         },
         error: function (e) {
             console.log("ops")
